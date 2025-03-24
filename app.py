@@ -46,7 +46,7 @@ def chatbot():
         response = get_treatment_info(user_input)
     elif "mi-am pus implant dentar" in user_input or "după detartraj" in user_input:
         response = get_post_treatment_info(user_input)
-elif "mă doare o măsea" in user_input or "durere măsea" in user_input or "măsea" in user_input:
+elif "ma doare o masea" in user_input or "durere masea" in user_input or "masea" in user_input:
     response = "O durere de măsea poate indica o carie sau o infecție. Vă recomandăm o consultație. Puteți solicita o programare direct aici."
 
 elif "detartraj" in user_input:
