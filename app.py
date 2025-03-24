@@ -3,6 +3,8 @@ import datetime
 import smtplib
 from email.mime.text import MIMEText
 from flask_cors import CORS
+
+app = Flask(__name__)
 CORS(app)
 
 database = {
