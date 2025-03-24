@@ -46,7 +46,20 @@ def chatbot():
         response = get_treatment_info(user_input)
     elif "mi-am pus implant dentar" in user_input or "după detartraj" in user_input:
         response = get_post_treatment_info(user_input)
+elif "mă doare o măsea" in user_input or "durere măsea" in user_input or "măsea" in user_input:
+    response = "O durere de măsea poate indica o carie sau o infecție. Vă recomandăm o consultație. Puteți solicita o programare direct aici."
 
+elif "detartraj" in user_input:
+    response = "După detartraj este posibilă o sensibilitate temporară. Evitați alimentele foarte reci sau fierbinți timp de 24-48h."
+
+elif "albire" in user_input:
+    response = "Albirea dentară poate provoca sensibilitate ușoară. Nu consumați alimente sau băuturi colorate timp de 48h."
+
+elif "nu am înțeles" in user_input or "ce fac" in user_input:
+    response = "Puteți reformula întrebarea sau cere o programare pentru un control."
+
+else:
+    response = "Întrebarea dvs. nu a fost recunoscută. Reformulați sau contactați clinica telefonic."
     return jsonify({"response": response})
 
 @app.route("/admin/add_doctor", methods=["POST"])
