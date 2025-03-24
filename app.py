@@ -140,5 +140,6 @@ def get_post_treatment_info(treatment):
         return "După detartraj, este posibil să simțiți o sensibilitate temporară a dinților. Se recomandă evitarea alimentelor acide și reci pentru 24 de ore."
     return "Nu am informații despre această situație. Contactați cabinetul pentru mai multe detalii."
 
-if __name__ == "__main__":
-    app.run(debug=True)
+import os
+port = int(os.environ.get("PORT", 5000))
+app.run(host="0.0.0.0", port=port)
