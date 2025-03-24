@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import datetime
 import smtplib
 from email.mime.text import MIMEText
-
+from flask_cors import CORS
 CORS(app)
 
 database = {
